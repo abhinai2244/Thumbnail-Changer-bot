@@ -1,0 +1,10 @@
+pyrofork
+pymongo
+yt-dlp
+tgcrypto
+aiofiles
+requests
+python-dotenv
+motor
+hachoir
+pillow

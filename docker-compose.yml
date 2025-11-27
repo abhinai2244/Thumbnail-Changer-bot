@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: media_bot
+    env_file:
+      - config.env
+    depends_on:
+      - mongo
+    volumes:
+      - ./downloads:/app/downloads
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo_db
+    restart: always
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
